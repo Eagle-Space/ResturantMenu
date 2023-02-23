@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Joe's Hotdogs Order System</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Joe's Hotdogs</h1>
+    <p>
+      Welcome to Joe's Hotdogs! Select the items you'd like to order from
+      the list below.
+    </p>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Add to Order</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hotdog</td>
+          <td>$4</td>
+          <td><input type="number" id="hotdog-quantity" value="0" /></td>
+          <td><button onclick="addToOrder('hotdog')">Add to Order</button></td>
+        </tr>
+        <tr>
+          <td>Fries</td>
+          <td>$3.50</td>
+          <td><input type="number" id="fries-quantity" value="0" /></td>
+          <td><button onclick="addToOrder('fries')">Add to Order</button></td>
+        </tr>
+        <tr>
+          <td>Soda</td>
+          <td>$1.50</td>
+          <td><input type="number" id="soda-quantity" value="0" /></td>
+          <td><button onclick="addToOrder('soda')">Add to Order</button></td>
+        </tr>
+        <tr>
+          <td>Sauerkraut</td>
+          <td>$1</td>
+          <td><input type="number" id="sauerkraut-quantity" value="0" /></td>
+          <td>
+            <button onclick="addToOrder('sauerkraut')">Add to Order</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="showOrder()">View Cart</button>
+    <button onclick="checkout()">Check Out</button>
+    <div id="order-summary"></div>
+    <script src="Hotdogs.js"></script>
+  </body>
+</html>
